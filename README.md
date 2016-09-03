@@ -27,4 +27,4 @@ console.image('rem.jpg', function () {
  A temporary canvas is created in which the image is drawn. getImageData creates an Array that contains the rgb values of every pixel. The image is drawn as a series of 1x1 text-shadows of a single dot.
 
 
-[live demo]: http://www.52cik.com/console.image/
+[live demo]: http://52cik.github.io/console.image/
