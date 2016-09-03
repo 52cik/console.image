@@ -17,13 +17,15 @@
 
       for (var x = 0; x < width; x++) {
         for (var y = 0; y < height; y++) {
-          text_shadow += `${x}px ${y}px 0px rgba(${data[y * width * 4 + x * 4]},${data[y * width * 4 + x * 4 + 1]},${data[y * width * 4 + x * 4 + 2]},${data[y * width * 4 + x * 4 + 3]}),`;
+          var offset = y * width * 4 + x * 4;
+          // text_shadow += `${x}px ${y}px 0 rgba(${data[offset]},${data[offset + 1]},${data[offset + 2]},${data[offset + 3]}),`;
+          text_shadow += x + 'px ' + y + 'px 0 rgba(' + data[offset] + ',' + data[offset + 1] + ',' + data[offset + 2] + ',' + data[offset + 3] + '),';
         }
       }
 
       text_shadow = text_shadow.slice(0, -1);
 
-      console.log('%c.', 'color:#fff;' + text_shadow);
+      console.log('%c.', 'color:transparent;' + text_shadow);
       callback && callback();
     }
 
