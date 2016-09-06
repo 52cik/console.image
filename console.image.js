@@ -2,16 +2,12 @@
   'use strict';
 
   console.image = function image (url, callback) {
-    var img = new Image;
-    var canvas = document.createElement('canvas');
-    var ctx = canvas.getContext('2d');
-
     return new Promise(function (resolve, reject) {
-      img.onerror = reject;
-      loadIamge(resolve);
-    });
+      var img = new Image;
+      var canvas = document.createElement('canvas');
+      var ctx = canvas.getContext('2d');
 
-    function loadIamge(resolve) {
+      img.onerror = reject;
       img.onload = function () {
         var width = canvas.width = img.width;
         var height = canvas.height = img.height;
@@ -36,8 +32,7 @@
       }
 
       img.src = url;
-    }
-
+    });
   };
 
 })(console);
