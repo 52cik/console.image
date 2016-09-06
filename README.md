@@ -17,6 +17,10 @@ console.image('rem.jpg');
 console.image('rem.jpg', function () {
   console.log('%c\t\t如果真爱有颜色，那一定是蓝色。', 'color:#4062a0;font-weight:bold;');
 });
+
+console.image('rem.jpg').then(function () {
+  console.log('%c\t\t如果真爱有颜色，那一定是蓝色。', 'color:#4062a0;font-weight:bold;');
+});
 ```
 > (only works if 'Access-Control-Allow-Origin' header is present on the requested resource, e.g. wikimedia or imgur).
 
