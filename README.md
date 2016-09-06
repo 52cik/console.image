@@ -13,11 +13,11 @@
 
 ```js
 console.image('rem.jpg');
-// or
+// or callback
 console.image('rem.jpg', function () {
   console.log('%c\t\t如果真爱有颜色，那一定是蓝色。', 'color:#4062a0;font-weight:bold;');
 });
-
+// or promise
 console.image('rem.jpg').then(function () {
   console.log('%c\t\t如果真爱有颜色，那一定是蓝色。', 'color:#4062a0;font-weight:bold;');
 });
